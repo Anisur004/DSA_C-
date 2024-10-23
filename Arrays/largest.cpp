@@ -1,28 +1,40 @@
 
-#include <bits/stdc++.h>
+// #include <bits/stdc++.h>
  
+// using namespace std;
+// int findLargestElement(int arr[], int n) {
+ 
+//   int max = arr[0];
+//   for (int i = 0; i < n; i++) {
+//     if (max < arr[i]) {
+//       max = arr[i];
+//     }
+//   }
+//   return max;
+// }
+// int main() {
+//   int arr1[] = {2,5,1,3,0};
+//   int n = 5;
+//   int max = findLargestElement(arr1, n);
+//   cout << "The largest element in the array is: " << max << endl;
+ 
+//   int arr2[] =  {8,10,5,7,9};
+//   n = 5;
+//   max = findLargestElement(arr2, n);
+//   cout << "The largest element in the array is: " << max<<endl;
+//   return 0;
+// }
+//**********************Brute force approach****************** */
+# include<bits/stdc++.h>
 using namespace std;
-int findLargestElement(int arr[], int n) {
- 
-  int max = arr[0];
-  for (int i = 0; i < n; i++) {
-    if (max < arr[i]) {
-      max = arr[i];
-    }
-  }
-  return max;
+
+int sortlargest(vector<int>& arr){
+sort(arr.begin(),arr.end());
+return arr[arr.size()-1];
 }
-int main() {
-  int arr1[] = {2,5,1,3,0};
-  int n = 5;
-  int max = findLargestElement(arr1, n);
-  cout << "The largest element in the array is: " << max << endl;
- 
-  int arr2[] =  {8,10,5,7,9};
-  n = 5;
-  max = findLargestElement(arr2, n);
-  cout << "The largest element in the array is: " << max<<endl;
+int main(){
+  vector<int>arr1={4,5,7,2,9,10};
+  cout<<"the largest element is"<<sortlargest(arr1);
   return 0;
+
 }
-
-
